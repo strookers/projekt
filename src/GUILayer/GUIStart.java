@@ -53,8 +53,7 @@ public class GUIStart extends JFrame{
         //orderCtr = new OrderCtr();
         //itemCtr = new ItemCtr();
 		personCtr = new PersonCtr();
-		makeFrame();
-		this.setVisible(true);
+		//makeFrame();
 	}
 	//Her blive alle GUI elementer sat op
 	public void makeFrame()
@@ -194,6 +193,7 @@ public class GUIStart extends JFrame{
 		
 		JMenuItem mntmItem = new JMenuItem("Item");
 		tabbedPane.addTab("Item", null, mntmItem, null);
+		this.setVisible(true);
 	}
 	
 	public void addCustomer()
