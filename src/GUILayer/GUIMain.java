@@ -12,13 +12,12 @@ public class GUIMain extends JFrame{
 	
 	public GUIMain() {
 		guistart = new GUIStart();
-		
 		setMinimumSize(new Dimension(1200, 720));
 		setVisible(true);
 		getContentPane().setLayout(null);
 		
 		JMenuBar fileMenu = new JMenuBar();
-		fileMenu.setBounds(0, 0, 1194, 26);
+		fileMenu.setBounds(0, 0, 1314, 26);
 		getContentPane().add(fileMenu);
 		
 		JMenu mnFiler = new JMenu("Filer");

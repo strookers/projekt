@@ -32,7 +32,6 @@ public class GUIStart extends JFrame{
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		new GUIStart();
-		
 	}
 	
 	public GUIStart()
@@ -53,7 +52,7 @@ public class GUIStart extends JFrame{
         //orderCtr = new OrderCtr();
         //itemCtr = new ItemCtr();
 		personCtr = new PersonCtr();
-		//makeFrame();
+		makeFrame();
 	}
 	//Her blive alle GUI elementer sat op
 	public void makeFrame()
@@ -83,12 +82,7 @@ public class GUIStart extends JFrame{
 		btnFind.setBounds(212, 29, 80, 25);
 		
 		//Dette definere hvad knappen skal gøre når du klikker på den
-		btnFind.addActionListener(new ActionListener()
-        {public void actionPerformed(ActionEvent e)
-            {
-        		findCustomer();
-            }
-        });
+		btnFind.addActionListener(new FindListener());
 		customerPanel.add(btnFind);
 		
 		JSeparator separator = new JSeparator();
@@ -134,32 +128,17 @@ public class GUIStart extends JFrame{
 		
 		JButton btnOpret = new JButton("Opret");
 		btnOpret.setBounds(212, 212, 80, 25);
-		btnOpret.addActionListener(new ActionListener()
-        {public void actionPerformed(ActionEvent e)
-            {
-        		addCustomer();
-            }
-        });
+		btnOpret.addActionListener(new OpretListener());
 		customerPanel.add(btnOpret);
 		
 		JButton btnRet = new JButton("Ret");
 		btnRet.setBounds(115, 212, 80, 25);
-		btnRet.addActionListener(new ActionListener()
-        {public void actionPerformed(ActionEvent e)
-            {
-        		updateCustomer();
-            }
-        });
+		btnRet.addActionListener(new RetListener());
 		customerPanel.add(btnRet);
 		
 		JButton btnSlet = new JButton("Slet");
 		btnSlet.setBounds(12, 212, 80, 25);
-		btnSlet.addActionListener(new ActionListener()
-        {public void actionPerformed(ActionEvent e)
-            {
-        		deleteCustomer();
-            }
-        });
+		btnSlet.addActionListener(new SletListener());
 		customerPanel.add(btnSlet);
 		
 		JPanel itemPanel = new JPanel();
@@ -259,5 +238,37 @@ public class GUIStart extends JFrame{
 		txtAdr.setText("");
 		txtCity.setText("");
 		txtPhone.setText("");
+	}
+	
+	private class FindListener implements ActionListener
+	{
+        public void actionPerformed(ActionEvent e)
+            {
+        		findCustomer();
+            }
+	}
+	
+	private class OpretListener implements ActionListener
+	{
+        public void actionPerformed(ActionEvent e)
+            {
+        		addCustomer();
+            }
+	}
+	
+	private class RetListener implements ActionListener
+	{
+        public void actionPerformed(ActionEvent e)
+            {
+        		updateCustomer();
+            }
+	}
+	
+	private class SletListener implements ActionListener
+	{
+        public void actionPerformed(ActionEvent e)
+            {
+        		deleteCustomer();
+            }
 	}
 }
