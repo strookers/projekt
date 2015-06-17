@@ -7,6 +7,10 @@ import javax.swing.border.TitledBorder;
 import java.awt.Color;
 import java.awt.SystemColor;
 public class GUIMain extends JFrame{
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 private GUIStart gStart;
 	public static void main(String[] args) {
 		new GUIMain();

@@ -10,7 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
-// this start here
+
 public class GUIStart extends JFrame{
 	private PersonCtr personCtr;
 	//private ItemCtr itemCtr;
