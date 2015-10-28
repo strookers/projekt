@@ -3,7 +3,7 @@ import java.io.*;
 /**
  * Dette er Customer klassen, som er en subklasse til super klassen Person
  *
- * @author Gruppe 4
+ * @author Gruppe 4, UCN
  */
 public class Customer extends Person implements Serializable
 {
